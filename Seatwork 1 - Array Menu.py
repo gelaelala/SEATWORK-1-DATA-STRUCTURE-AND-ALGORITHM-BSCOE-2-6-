@@ -45,9 +45,9 @@ def randomnum ():
     time.sleep (1)
     print (stylize ("6 --> Arrange the array in ascending order", colored.fg ('medium_purple')))
     time.sleep (1)
-    print (stylize ("7 --> Arrange the array in descending order)", colored.fg ('medium_purple')))
+    print (stylize ("7 --> Arrange the array in descending order", colored.fg ('medium_purple')))
     time.sleep (1)
-    print (stylize ("8 --> Reverse the array)", colored.fg ('medium_purple')))
+    print (stylize ("8 --> Reverse the array", colored.fg ('medium_purple')))
     time.sleep (1)
     print (stylize ("9 --> Find the smallest number on the array", colored.fg ('medium_purple')))
     time.sleep (1)
@@ -57,6 +57,7 @@ def randomnum ():
     print ("\t")
     time.sleep (2) 
     user_input = input(stylize ("What do you want to do with the array? (Choose from 1-10): ", colored.fg ('medium_purple_2a')))
+    print ("\t")
     time.sleep (1)
     return initial_array, user_input
 
@@ -119,9 +120,28 @@ def array_feature (ini_array, user):
         print ("The array has been reversed.")
         print ("\t")
         time.sleep (1)
-        print (stylize (f"This is the new array: {ini_array}", colored.fg ('plum_1')))
-        
-
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('wheat_1')))
+    elif user == "9": # for finding the smallest number on the array using min ()
+        time.sleep (1)
+        smallest_num = min (ini_array)
+        print ("Smallest number has been identified on the array.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"The smallest number found on the array is {smallest_num}", colored.fg ('light_yellow_3')))
+    elif user == "10": # for finding the largest number on the array using max ()
+        time.sleep (1)
+        largest_num = max (ini_array)
+        print ("Largest number has been identified on the array.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"The largest number found on the array is {largest_num}", colored.fg ('grey_54')))
+    elif user == "11": # for calculating the total sum of all numbers on the array using sum ()
+        time.sleep (1)
+        total_array = sum (ini_array)
+        print ("Total sum of the numbers in the array has been calculated.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"The total sum of numbers in the array is {total_array}", colored.fg ('khaki_1')))
 
 
 def main ():
