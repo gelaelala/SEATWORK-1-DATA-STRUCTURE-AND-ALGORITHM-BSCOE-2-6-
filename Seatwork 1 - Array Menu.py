@@ -12,7 +12,7 @@ from colored import stylize
 import sys
 import time
 
-# program intro
+# function for the program intro
 def intro ():
     print ("Welcome to Array Modifier!")
     print ("\t")
@@ -25,7 +25,7 @@ def intro ():
     print ("\t")
     time.sleep (2)
 
-# displaying the initial array and asking for user's input for what they want to do with the given array
+# function for displaying the initial array and asking for user's input for what they want to do with the given array
 def randomnum ():
     initial_array = [92, 45, 27, 53, 77, 22, 77, 14, 50, 70]
     print (stylize (f"Here's your initial array: {initial_array}", colored.fg ('medium_purple_2a')))
@@ -47,14 +47,17 @@ def randomnum ():
     time.sleep (1)
     print (stylize ("7 --> Arrange the array in descending order)", colored.fg ('medium_purple')))
     time.sleep (1)
-    print (stylize ("8 --> Find the smallest number on the array", colored.fg ('medium_purple')))
+    print (stylize ("8 --> Reverse the array)", colored.fg ('medium_purple')))
     time.sleep (1)
-    print (stylize ("9 --> Find the largest number on the array", colored.fg ('medium_purple')))
+    print (stylize ("9 --> Find the smallest number on the array", colored.fg ('medium_purple')))
     time.sleep (1)
-    print (stylize ("10 --> Compute for the sum of all numbers included in the array", colored.fg ('medium_purple')))
+    print (stylize ("10 --> Find the largest number on the array", colored.fg ('medium_purple')))
+    time.sleep (1)
+    print (stylize ("11 --> Compute for the sum of all numbers included in the array", colored.fg ('medium_purple')))
     print ("\t")
     time.sleep (2) 
     user_input = input(stylize ("What do you want to do with the array? (Choose from 1-10): ", colored.fg ('medium_purple_2a')))
+    time.sleep (1)
     return initial_array, user_input
 
 # function for all the built-in functions for list that will be used in the menus provided 
@@ -97,12 +100,27 @@ def array_feature (ini_array, user):
         time.sleep (1)
         print (stylize (f"This is the new array: {ini_array}", colored.fg ('light_sky_blue_1')))
     elif user == "6": # for sorting the array in ascending order 
+        time.sleep (1)
         ini_array.sort ()
         print ("The array has been sorted in ascending order.")
         print ("\t")
         time.sleep (1)
         print (stylize (f"This is the new array: {ini_array}", colored.fg ('blue_violet')))
-
+    elif user == "7": # for sorting the array in descending order
+        time.sleep (1)
+        ini_array.sort (reverse = True)
+        print ("The array has been sorted in descending order")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('purple_4b')))
+    elif user == "8": # for reversing the array
+        time.sleep (1)
+        ini_array.reverse ()
+        print ("The array has been reversed.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('plum_1')))
+        
 
 
 
