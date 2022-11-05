@@ -52,8 +52,21 @@ def randomnum ():
     user_input = input(stylize ("What do you want to do with the array? (Choose from 1-10): ", colored.fg ('medium_purple_2a')))
     return initial_array, user_input
 
+def array_feature (ini_array, user):
+    if user == "1":
+        add_num = int(input ("Enter a number you want to add to the array: "))
+        ini_array.append (add_num)
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('indian_red_1d')))
+    else:
+        if user == "2":
+            index_num = input("Enter the index you want to insert your element: ")
+            element_num = int(input ("Enter the element you want to insert: "))
+            ini_array.insert (index_num, element_num)
+            print (stylize (f"This is the new array: {ini_array}", colored.fg ('sandy_brown')))
+
 def main ():
     intro ()
-    randomnum ()
+    ini_array ,user = randomnum ()
+    array_feature (ini_array, user)
 
 main ()
