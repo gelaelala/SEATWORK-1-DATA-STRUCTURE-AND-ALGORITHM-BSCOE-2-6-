@@ -149,7 +149,7 @@ def continue_program (ini_array):
     continue_user = input ("Do you want to restart the program? (yes/no): ")
     if continue_user == "yes":
         print ("\t")
-        print (stylize (f"Restarting the program. Please wait.", colored.fg ('medium_purple_2a')))
+        print (stylize ("Restarting the program. Please wait.", colored.fg ('medium_purple_2a')))
         print ("\t")
         time.sleep (3)
         main () # the program will go back to randomnum () function to display the initial array and to ask the user again which feature will be used for modification
