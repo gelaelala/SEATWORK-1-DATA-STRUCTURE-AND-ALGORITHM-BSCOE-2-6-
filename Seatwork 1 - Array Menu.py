@@ -143,16 +143,16 @@ def array_feature (ini_array, user):
         time.sleep (1)
         print (stylize (f"The total sum of numbers in the array is {total_array}", colored.fg ('khaki_1')))
 
-# function where the program will ask the user to either continue modifying the list or end the program
+# function where the program will ask the user to either restart or end the program
 def continue_program (ini_array):
     print ("\t")
-    continue_user = input ("Do you want to continue modifying the array? (yes/no): ")
+    continue_user = input ("Do you want to restart the program? (yes/no): ")
     if continue_user == "yes":
         print ("\t")
-        print (stylize (f"Continuing the program. Please wait.", colored.fg ('medium_purple_2a')))
+        print (stylize (f"Restarting the program. Please wait.", colored.fg ('medium_purple_2a')))
         print ("\t")
         time.sleep (3)
-        main () # the program will go back to randomnum () function to ask the user again which feature will be used for modification
+        main () # the program will go back to randomnum () function to display the initial array and to ask the user again which feature will be used for modification
     elif continue_user == "no":
         print ("\t")
         print (stylize (f"Here's your final array after modifying: {ini_array}", colored.fg ('medium_purple_2a'))) # The program will show the final array of numbers after modifying
