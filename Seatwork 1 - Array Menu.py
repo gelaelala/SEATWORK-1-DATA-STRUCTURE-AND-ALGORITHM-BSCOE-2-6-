@@ -85,11 +85,25 @@ def array_feature (ini_array, user):
     elif user == "4": # for removing an element by index using pop ()
         index = int(input("Enter the index you want to remove: "))
         ini_array.pop (index)
-        print ("The element has been deleted.")
+        print ("The element has been removed.")
         print ('\t')
         time.sleep (1)
         print (stylize (f"This is the new array: {ini_array}", colored.fg ('spring_green_2a')))
-    
+    elif user == "5": # for removing an element by choosing a specific element on the array using remove ()
+        element = int(input("Enter the element you want to remove from the array: "))
+        ini_array.remove (element)
+        print ("The element has been removed.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('light_sky_blue_1')))
+    elif user == "6": # for sorting the array in ascending order 
+        ini_array.sort ()
+        print ("The array has been sorted in ascending order.")
+        print ("\t")
+        time.sleep (1)
+        print (stylize (f"This is the new array: {ini_array}", colored.fg ('blue_violet')))
+
+
 
 
 def main ():
